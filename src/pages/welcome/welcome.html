@@ -1,23 +1,13 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>
-            Ionic Blank
-        </ion-title>
-    </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-    <button ion-button block color="danger" (click)="loginUser()" *ngIf="!userProfile">
-    <ion-icon name="logo-googleplus"></ion-icon>
-    &nbsp;Login with Google
-  </button>
-
-    <ion-item *ngIf="userProfile">
-        <ion-avatar item-left>
-            <img [src]="userProfile.photoURL">
-        </ion-avatar>
-        <h2>{{ userProfile.displayName }}</h2>
-        <h3>{{ userProfile.email }}</h3>
-    </ion-item>
+<ion-content scroll="false">
+    <div class="splash-bg"></div>
+    <div class="splash-info">
+        <div class="splash-logo"></div>
+        <div class="splash-intro">
+            {{ 'WELCOME_INTRO' | translate }}
+        </div>
+    </div>
+    <div padding>
+        <button ion-button block (click)="signup()">{{ 'SIGNUP' | translate }}</button>
+        <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+    </div>
 </ion-content>
