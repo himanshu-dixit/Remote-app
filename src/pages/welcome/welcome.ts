@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-
+import { GooglePlus } from '@ionic-native/google-plus';
+import firebase from 'firebase'; 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
  * and then directs the user to create an account or log in.
@@ -12,15 +13,36 @@ import { IonicPage, NavController } from 'ionic-angular';
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
 })
+
 export class WelcomePage {
-
-  constructor(public navCtrl: NavController) { }
-
-  login() {
-    this.navCtrl.push('LoginPage');
+  userProfile: any = null;
+  constructor(public navCtrl: NavController, private googlePlus: GooglePlus) { 
+    firebase.auth().onAuthStateChanged(user =>{
+      if(user){
+        this.userProfile = user;
+      } else {
+        this.userProfile = null;
+      }
+    })
   }
 
-  signup() {
-    this.navCtrl.push('SignupPage');
+  loginUser(): void {
+    this.googlePlus.login({
+      'webClientId':'223296465079-df1kr53o1dkir3bvpopbium7jca1pcrk.apps.googleusercontent.com',
+      'offline': true
+    }).then( res => {
+            const googleCredential = firebase.auth.GoogleAuthProvider
+                .credential(res.idToken);
+   
+            firebase.auth().signInWithCredential(googleCredential)
+          .then( response => {
+              console.log("Firebase success: " + JSON.stringify(response));
+          });
+    }, err => {
+        console.error("Error: ", err)
+    });
   }
+
 }
+
+

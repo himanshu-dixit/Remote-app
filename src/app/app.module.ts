@@ -8,7 +8,9 @@ import { IonicStorageModule, Storage } from '@ionic/storage';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { AngularFireModule } from 'angularfire2';
+import { GooglePlus } from '@ionic-native/google-plus'
+import * as firebase from 'firebase';
 import { Items } from '../mocks/providers/items';
 import { Settings } from '../providers/providers';
 import { User } from '../providers/providers';
@@ -36,6 +38,18 @@ export function provideSettings(storage: Storage) {
   });
 }
 
+  
+export const firebaseConfig = {
+  apiKey: "AIzaSyD3LxjBlPFgKXu40Ov29FBUaQUum6PfYIc",
+  authDomain: "hackinout-ac02b.firebaseapp.com",
+  databaseURL: "https://hackinout-ac02b.firebaseio.com",
+  projectId: "hackinout-ac02b",
+  storageBucket: "hackinout-ac02b.appspot.com",
+  messagingSenderId: "223296465079"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 @NgModule({
   declarations: [
     MyApp
@@ -51,7 +65,8 @@ export function provideSettings(storage: Storage) {
       }
     }),
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+  AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -63,6 +78,7 @@ export function provideSettings(storage: Storage) {
     User,
     Camera,
     SplashScreen,
+    GooglePlus,
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
