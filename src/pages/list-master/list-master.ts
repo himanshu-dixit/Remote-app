@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
-
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { IonicPage, NavController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -11,4 +8,9 @@ import { Items } from '../../providers/providers';
 })
 export class ListMasterPage {
 
+  constructor(public navCtrl: NavController) {
+  }
+  anal(){
+    this.navCtrl.push('SettingsPage')
+  }
 }

@@ -1,58 +1,61 @@
-.title{
-  margin: 20px auto 15px auto;
-  color: grey;
-  font-size: 16px;
-  text-align: center;
-}
-.tip_title{
-  font-size: 12px;
-  color: white;
-  margin: 0 auto;
+.title {
+    margin: 20px auto 15px auto;
+    color: grey;
+    font-size: 16px;
+    text-align: center;
 }
 
-.tip{
-  width: 95%;
-  margin: 5px auto;
-  background: #5a41ff;
-  border-radius: 4px;
-  padding: 20px 0px;
+.tip_title {
+    font-size: 12px;
+    color: white;
+    margin: 0 auto;
 }
 
-.task_item{
-  width: 95%;
-  margin: 5px auto;
-  background: #5a41ff;
-  border-radius: 4px;
-  padding: 20px 0px;
+.tip {
+    width: 95%;
+    margin: 5px auto;
+    background: #5a41ff;
+    border-radius: 4px;
+    padding: 20px 0px;
 }
 
-.task_list{
-  width: 100%;
-  color: white;
+.task_item {
+    width: 95%;
+    margin: 5px auto;
+    background: #5a41ff;
+    border-radius: 4px;
+    padding: 20px 0px;
 }
 
-.icon{
-  font-size: 32px;
-  margin-left: 20px;
+.task_list {
+    width: 100%;
+    color: white;
 }
 
-.duration{
-  padding-top: 10px;
-  padding-right: 19px;
-  text-align: right;
+.icon {
+    font-size: 32px;
+    margin-left: 20px;
 }
 
-.menu_item{
-  text-align: center;
-  color: grey;
-  font-size: 15px;
-  padding-bottom: 4px;
+.duration {
+    padding-top: 10px;
+    padding-right: 19px;
+    text-align: right;
 }
-.selected{
-  border-bottom: 3px solid #5a41ff;
-  color: #5a41ff;
+
+.menu_item {
+    text-align: center;
+    color: grey;
+    font-size: 15px;
+    padding-bottom: 4px;
 }
-.footer{
-  position: absolute;
-  bottom: 5px;
+
+.selected {
+    border-bottom: 3px solid #5a41ff;
+    color: #5a41ff;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
 }
