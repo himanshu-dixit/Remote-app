@@ -38,7 +38,7 @@ export class TutorialPage {
           },
           {
             title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
+            description: 'This app collects data from your smart phone and uses AI to automatically assign an event to them.',
             image: 'assets/img/ica-slidebox-img-2.png',
           }
         ];
