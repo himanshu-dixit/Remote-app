@@ -44,3 +44,21 @@ h4 {
     font-size: 16px;
     text-align: center;
 }
+
+.menu_item {
+    text-align: center;
+    color: grey;
+    font-size: 15px;
+    padding-bottom: 4px;
+}
+
+.selected {
+    border-bottom: 3px solid #5a41ff;
+    color: #5a41ff;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
+    z-index: 999;
+}
