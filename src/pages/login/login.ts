@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
-
+import { CardsPage } from '../cards';
 import { User } from '../../providers/providers';
 import { MainPage } from '../pages';
+
 
 @IonicPage()
 @Component({
@@ -46,5 +47,9 @@ export class LoginPage {
       });
       toast.present();
     });
+  }
+
+  Cards(){
+    this.navCtrl.push('CardsPage')
   }
 }
