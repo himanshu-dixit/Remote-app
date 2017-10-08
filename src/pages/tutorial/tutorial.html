@@ -16,7 +16,7 @@
             </ion-buttons>
         </ion-slide>
     </ion-slides>
-    <ion-buttons end *ngIf="showSkip">
+    <ion-buttons end *ngIf="showSkip" style="position: relative; z-index: 512;">
         <button ion-button (click)="startApp()" color="primary">{{ 'TUTORIAL_SKIP_BUTTON' | translate}}</button>
     </ion-buttons>
 </ion-content>
