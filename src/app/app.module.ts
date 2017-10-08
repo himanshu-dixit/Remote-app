@@ -1,7 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Camera } from '@ionic-native/camera';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule, Storage } from '@ionic/storage';
@@ -38,7 +37,7 @@ export function provideSettings(storage: Storage) {
   });
 }
 
-  
+
 export const firebaseConfig = {
   apiKey: "AIzaSyD3LxjBlPFgKXu40Ov29FBUaQUum6PfYIc",
   authDomain: "hackinout-ac02b.firebaseapp.com",
@@ -76,7 +75,6 @@ firebase.initializeApp(firebaseConfig);
     Api,
     Items,
     User,
-    Camera,
     SplashScreen,
     GooglePlus,
     StatusBar,

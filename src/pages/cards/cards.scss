@@ -1,3 +1,55 @@
 page-cards {
 
 }
+.profile_pic{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  border-radius: 6px;
+  margin-left: 6px;
+  width: 150px;
+  height: 150px;
+  padding: 29px 16px 16px 16px;
+  overflow: hidden;
+  margin-right: 22px;
+  float: left;
+}
+
+.name{
+  font-size: 20px;
+  margin-top: 11px;
+  font-weight: 500;
+  color: #505050;
+  float: left;
+}
+.date{
+  margin: 17px 15px;
+  color: grey;
+  font-size: 16px;
+}
+.activity-1{
+  height: 8px;
+  width: 97%;
+  background: #dadada;
+  border-radius: 56px;
+  margin: 12px auto;
+}
+
+.activity-2{
+  height: 7px;
+  width: 84%;
+  background: #413d3e;
+  border-radius: 56px;
+  position: absolute;
+}
+
+.activity-3{
+  background: #687bfd;
+  position: absolute;
+  height: 7px !important;
+  width: 23%;
+  border-radius: 56px;
+  margin: 0px !important;
+}
+
